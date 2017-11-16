@@ -1,0 +1,21 @@
+---
+- hosts: demo
+  gather_facts: no
+  roles:
+    - role_with_module
+
+- hosts: linux
+  gather_facts: no
+  tasks:
+    - mymod:
+      register: res
+    - debug:
+        var: res.msg
+
+- hosts: windows
+  gather_facts: no
+  tasks:
+    - winmod:
+      register: res
+    - debug:
+        var: res.msg

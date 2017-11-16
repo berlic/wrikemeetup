@@ -1,0 +1,7 @@
+---
+- hosts: linux
+  gather_facts: no
+  roles:
+    - role_with_module
+  tasks:
+    - mymod:

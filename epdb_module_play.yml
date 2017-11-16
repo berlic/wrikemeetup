@@ -1,0 +1,5 @@
+---
+- hosts: linux
+  gather_facts: no
+  tasks:
+    - test_epdb:

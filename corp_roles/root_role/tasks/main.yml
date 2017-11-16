@@ -1,0 +1,4 @@
+---
+- name: Message from corporate role
+  debug:
+    msg: "corp_roles @ root directory – Hello!"

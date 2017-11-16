@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  gather_facts: no
+  roles:
+    - myrole
+    - root_role
+    - corp_roles/nested_role

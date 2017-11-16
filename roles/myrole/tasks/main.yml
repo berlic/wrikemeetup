@@ -1,0 +1,4 @@
+---
+- name: Message from project role
+  debug:
+    msg: "Hello!"

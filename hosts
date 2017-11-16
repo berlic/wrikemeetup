@@ -1,0 +1,22 @@
+localhost ansible_connection=local
+
+[demo]
+[demo:children]
+linux
+windows
+
+[linux]
+wrikemeetup_linux
+
+[linux:vars]
+ansible_ssh_extra_args='-R9999:localhost:9999'
+
+[windows]
+wrikemeetup_windows
+
+[windows:vars]
+ansible_user=Administrator
+ansible_password=Aa123456
+ansible_connection=winrm
+ansible_port=5986
+ansible_winrm_server_cert_validation=ignore
